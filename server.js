@@ -1,11 +1,9 @@
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
-const Notes =require('./db/db.json')
 const { v4: uuidv4 } = require('uuid');
 
 const PORT = 3001;
-
 const app = express();
 
 app.use(express.json());
@@ -18,7 +16,11 @@ app.get('/notes', (req, res) =>
 );
 
 // GET request for notes
-app.get('/api/notes', (req, res) => res.json(Notes));
+app.get('/api/notes', (req, res) => {
+    var data = JSON.parse(fs.readFileSync('./db/db.json', {encoding: 'utf-8'}));
+    return res.status(200).json(data)
+  }
+);
 
 // POST request to add a notes
 app.post('/api/notes', (req, res) => {
@@ -27,9 +29,7 @@ app.post('/api/notes', (req, res) => {
   // Destructuring assignment for the items in req.body
   const { title, text } = req.body;
 
-  // If all the required properties are present
   if (title && text) {
-    // Variable for the object we will save
     const newNote = {
       title,
       text,
@@ -44,7 +44,6 @@ app.post('/api/notes', (req, res) => {
         // Convert string into JSON object
         const parsedNotes = JSON.parse(data);
 
-        // Add a new note
         parsedNotes.push(newNote);
 
         // Write updated notes back to the file
