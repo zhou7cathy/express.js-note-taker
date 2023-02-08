@@ -1,61 +1,17 @@
 [
     {
-        "title": "Test Title",
-        "text": "Test text"
-    },
-    {
         "title": "Monday",
-        "text": "Go to GP after work",
-        "review_id": "9ff1"
-    },
-    {
-        "title": "Monday",
-        "text": "Monday class at 6:30pm",
-        "note_id": "d415"
+        "text": "Class at 6:30pm",
+        "id": "174bf3c1-8667-4f90-b41a-1f03f97db29d"
     },
     {
         "title": "Tuesday",
         "text": "Class at 6:30pm",
-        "note_id": "c8273366-3926-44ec-b5c1-b937d4a10571"
+        "id": "f71c22af-4e24-4f1f-bd69-47b707eddab8"
     },
     {
-        "title": "Wednesday",
-        "text": "Class at 7:00pm",
-        "id": "e16a5dba-751f-4237-a2da-16a8535c23b6"
-    },
-    {
-        "title": "Thurday",
-        "text": "Class at 6:30pm",
-        "id": "603c60f2-832f-4c45-af47-b746df246021"
-    },
-    {
-        "title": "Friday",
-        "text": "No Class",
-        "id": "de6a710f-cf18-47fe-b8f0-e7b55a7a94ef"
-    },
-    {
-        "title": "sdfsdf",
-        "text": "dsfdsf",
-        "id": "ae7a51e3-fcfa-4ed2-9daf-82f59a4c4ac1"
-    },
-    {
-        "title": "123",
-        "text": "321",
-        "id": "66459939-42dc-4bb2-9ccc-350be96bdae5"
-    },
-    {
-        "title": "333",
-        "text": "444",
-        "id": "0c4d7cef-d5d8-4b91-9553-9f49c6cf3791"
-    },
-    {
-        "title": "888",
-        "text": "999",
-        "id": "eebe99d4-a1d9-4994-abfa-8eadda5342c8"
-    },
-    {
-        "title": "1212",
-        "text": "1212",
-        "id": "96cf367b-8f91-4d8d-b83d-1c6345d071c3"
+        "title": "Thursday ",
+        "text": "Class at 6.30pm",
+        "id": "b9c7293e-3693-4aa3-af8b-95d5499325ca"
     }
 ]

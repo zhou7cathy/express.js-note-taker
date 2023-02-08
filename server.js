@@ -17,10 +17,9 @@ app.get('/notes', (req, res) =>
 
 // GET request for notes
 app.get('/api/notes', (req, res) => {
-    var data = JSON.parse(fs.readFileSync('./db/db.json', {encoding: 'utf-8'}));
-    return res.status(200).json(data)
-  }
-);
+  var data = JSON.parse(fs.readFileSync('./db/db.json', {encoding: 'utf-8'}));
+  return res.status(200).json(data)
+});
 
 // POST request to add a notes
 app.post('/api/notes', (req, res) => {
@@ -43,7 +42,6 @@ app.post('/api/notes', (req, res) => {
       } else {
         // Convert string into JSON object
         const parsedNotes = JSON.parse(data);
-
         parsedNotes.push(newNote);
 
         // Write updated notes back to the file
@@ -68,6 +66,33 @@ app.post('/api/notes', (req, res) => {
   } else {
     res.status(500).json('Error in posting notes');
   }
+});
+
+app.delete('/api/notes/:id', (req, res) => {
+  console.info(`${req.method} request received to delete a note`);
+  var data = JSON.parse(fs.readFileSync('./db/db.json', {encoding: 'utf-8'}));
+  const NoteId = req.params.id;
+  const noteToDelete = data.find(el => el.id === NoteId);
+  const index = data.indexOf(noteToDelete);
+
+  data.splice(index, 1);
+
+  fs.writeFile(
+    './db/db.json',
+    JSON.stringify(data, null, 4),
+    (writeErr) =>
+      writeErr
+        ? console.error(writeErr)
+        : console.info('Successfully updated db!')
+  );
+
+  const response = {
+    status: 'success',
+    body: data,
+  };
+
+  console.log(response);
+  res.status(203).json(response);
 });
 
 app.get('*', (req, res) =>
