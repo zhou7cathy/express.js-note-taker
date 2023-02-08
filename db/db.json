@@ -1,17 +1,17 @@
 [
     {
-        "title": "Monday",
-        "text": "Class at 6:30pm",
-        "id": "174bf3c1-8667-4f90-b41a-1f03f97db29d"
+        "title": "Friday lunch with client",
+        "text": "Dinner at Amano Restaurant @1pm with David & Maria",
+        "id": "636b1708-ff7e-46bf-be01-75dfe347e224"
     },
     {
-        "title": "Tuesday",
-        "text": "Class at 6:30pm",
-        "id": "f71c22af-4e24-4f1f-bd69-47b707eddab8"
+        "title": "Tuesday Check Payroll",
+        "text": "Check payroll",
+        "id": "37f001cc-3890-42b3-a9a1-08aedd06b31e"
     },
     {
-        "title": "Thursday ",
-        "text": "Class at 6.30pm",
-        "id": "b9c7293e-3693-4aa3-af8b-95d5499325ca"
+        "title": "Reschedule delivery",
+        "text": "Reschedule delivery from Friday 10/02  to Monday 13/02.",
+        "id": "99ac21ae-2f5b-407b-b11c-4cdc60bf49d5"
     }
 ]
